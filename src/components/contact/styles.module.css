@@ -1,0 +1,44 @@
+.contact {
+  width: 100%;
+  padding: 40px 0 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.title {
+  margin: 0 0 30px;
+  font-size: 42px;
+}
+
+.info {
+  margin-bottom: 24px;
+  color: #7c7c7c;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 400px;
+}
+
+.form input,
+.form textarea {
+  border: none;
+  border-bottom: 1px solid #c9c9c9;
+  padding: 12px 0;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+}
+
+.form textarea {
+  resize: none;
+  min-height: 80px;
+}

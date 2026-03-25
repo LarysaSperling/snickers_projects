@@ -1,0 +1,157 @@
+.footer {
+  width: 100%;
+  background: #232425;
+  padding: 60px 0;
+  margin-top: 80px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.text {
+  margin-bottom: 10px;
+  color: #8f9196;
+  font-size: 14px;
+}
+
+.copy {
+  margin-top: 30px;
+  color: #6d7077;
+  font-size: 12px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: min(100%, 420px);
+}
+
+.socials {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 35px;
+}
+
+.socials a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #232425;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s;
+}
+
+.socials img {
+  width: 18px;
+  height: 18px;
+}
+
+.socials a:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: #9dd458;
+}
+
+.socials a:active {
+  transform: scale(0.9);
+}
+
+.inputWrap {
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #3f4043;
+  padding: 10px 0;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-bottom-color: #8a8f98;
+}
+
+.input::placeholder {
+  color: #8a8f98;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .right {
+    align-items: flex-start;
+    width: 100%;
+  }
+.inputWrap {
+    width: 100%;
+    max-width: 100%;
+  }
+  .input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 0;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .text {
+    font-size: 13px;
+  }
+
+  .socials {
+    gap: 10px;
+  }
+
+  .socials a {
+    width: 34px;
+    height: 34px;
+  }
+
+  .socials img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .input {
+    padding: 8px 0;
+    font-size: 14px;
+  }
+}
