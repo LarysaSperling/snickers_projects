@@ -1,0 +1,118 @@
+.banner {
+  width: 100%;
+  max-width: 1420px;
+  margin: clamp(12px, 2vw, 20px) 0 clamp(24px, 4vw, 40px);
+  overflow: hidden;
+}
+
+.top {
+  position: relative;
+  width: 100%;
+  height: clamp(180px, 20vw, 295px);
+  background: #5573ab;
+  overflow: hidden;
+}
+
+.bottom {
+  position: relative;
+  width: 100%;
+  height: clamp(140px, 15vw, 210px);
+  background: #9f9ea1;
+  overflow: hidden;
+}
+
+.logo {
+  position: absolute;
+  top: clamp(10px, 1.2vw, 18px);
+  left: clamp(10px, 1.2vw, 18px);
+  width: clamp(28px, 4vw, 59px);
+  height: clamp(28px, 4vw, 59px);
+  object-fit: contain;
+  z-index: 5;
+}
+
+.one {
+  position: absolute;
+  left: clamp(8px, 1vw, 14px);
+  bottom: clamp(-28px, -1.3vw, -25px);
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(72px, 13vw, 188px);
+  font-weight: 800;
+  line-height: 1;
+  color: #2a406a;
+  z-index: 1;
+}
+
+.topShoe {
+  position: absolute;
+  left: clamp(90px, 22vw, 320px);
+  top: clamp(8px, 1.5vw, 20px);
+  width: clamp(150px, 24vw, 339px);
+  height: auto;
+  object-fit: contain;
+  z-index: 3;
+}
+
+.discount {
+  position: absolute;
+  top: clamp(10px, 1.2vw, 16px);
+  right: clamp(12px, 4vw, 62px);
+  z-index: 4;
+}
+
+.discount p {
+  margin: 0 0 clamp(2px, 0.5vw, 6px) 0;
+  font-size: clamp(16px, 3.3vw, 48px);
+  font-weight: 700;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.discount h1 {
+  margin: 0;
+  font-size: clamp(40px, 8.8vw, 128px);
+  font-weight: 800;
+  line-height: 0.95;
+  color: #ffffff;
+}
+
+.air {
+  position: absolute;
+  bottom: clamp(-28px, -1.3vw, -25px);
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(72px, 13vw, 188px);
+  font-weight: 800;
+  line-height: 1;
+  color: #696969;
+  opacity: 0.72;
+  z-index: 1;
+}
+
+.bottomShoe {
+  position: absolute;
+  right: clamp(20px, 9vw, 138px);
+  top: clamp(-10px, -0.2vw, -2px);
+  width: clamp(170px, 30vw, 428px);
+  height: auto;
+  object-fit: contain;
+  z-index: 3;
+}
+
+@media (max-width: 600px) {
+  .topShoe {
+    left: 26vw;
+    top: 18px;
+    width: 34vw;
+  }
+
+  .bottomShoe {
+    right: 8px;
+    width: 34vw;
+  }
+
+  .discount {
+    right: 10px;
+  }
+}
