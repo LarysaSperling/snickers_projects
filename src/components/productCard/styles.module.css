@@ -1,1 +1,146 @@
+.card {
+  width: 100%;
+  max-width: 386px;
+  min-height: 393px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: clamp(16px, 2vw, 24px);
+  box-sizing: border-box;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.image {
+  width: 100%;
+  max-width: clamp(140px, 16vw, 220px);
+  height: auto;
+  margin: 0 auto 10px;
+  display: block;
+  object-fit: contain;
+}
+
+.name {
+  font-size: clamp(18px, 1.8vw, 24px);
+  font-weight: 500;
+  margin: 0 0 16px;
+  color: #000;
+  line-height: 1.25;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.label {
+  font-size: clamp(10px, 0.9vw, 12px);
+  color: #9a9a9a;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.price {
+  font-size: clamp(18px, 1.8vw, 24px);
+  font-weight: 700;
+  margin: 4px 0 0;
+}
+
+.button {
+  width: 37px;
+  height: 37px;
+  min-width: 37px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f2f2f2;
+  font-size: 20px;
+  transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.button:hover {
+  background: #d6d6d6;
+}
+
+.button:active {
+  background: #807e7e;
+  transform: scale(0.92);
+}
+
+.buttonActive {
+  background: #9dd458;
+  color: #ffffff;
+}
+
+.buttonActive:hover {
+  background: #89c248;
+}
+
+.buttonActive:active {
+  background: #7bb53f;
+}
+
+@media (max-width: 992px) {
+  .card {
+    min-height: 350px;
+    border-radius: 18px;
+  }
+
+  .button {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    min-height: 320px;
+    border-radius: 16px;
+  }
+
+  .name {
+    margin-bottom: 12px;
+  }
+
+  .button {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    min-height: 290px;
+    border-radius: 14px;
+    padding: 14px;
+  }
+
+  .image {
+    max-width: 140px;
+  }
+
+  .button {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    font-size: 16px;
+  }
+}

@@ -13,13 +13,33 @@
 
 .title {
   margin: 0 0 28px;
-  font-size: 36px;
+  font-size: clamp(28px, 2.8vw, 40px);
   font-weight: 700;
   color: #111111;
 }
 
 .products {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(260px, 386px));
+  justify-content: space-between;
   gap: 28px;
+}
+
+@media (max-width: 1200px) {
+  .products {
+    grid-template-columns: repeat(2, minmax(260px, 386px));
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 20px;
+  }
 }
