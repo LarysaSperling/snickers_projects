@@ -8,7 +8,7 @@
 .top {
   position: relative;
   width: 100%;
-  height: clamp(180px, 20vw, 295px);
+  min-height: clamp(150px, 32vw, 295px);
   background: #5573ab;
   overflow: hidden;
 }
@@ -16,39 +16,39 @@
 .bottom {
   position: relative;
   width: 100%;
-  height: clamp(140px, 15vw, 210px);
+  min-height: clamp(120px, 22vw, 210px);
   background: #9f9ea1;
   overflow: hidden;
 }
 
 .logo {
   position: absolute;
-  top: clamp(10px, 1.2vw, 18px);
-  left: clamp(10px, 1.2vw, 18px);
-  width: clamp(28px, 4vw, 59px);
-  height: clamp(28px, 4vw, 59px);
+  top: clamp(10px, 1.5vw, 18px);
+  left: clamp(10px, 1.5vw, 18px);
+  width: clamp(28px, 5vw, 59px);
+  height: clamp(28px, 5vw, 59px);
   object-fit: contain;
   z-index: 5;
 }
 
 .one {
   position: absolute;
-  left: clamp(8px, 1vw, 14px);
-  bottom: clamp(-28px, -1.3vw, -25px);
+  left: clamp(8px, 1.2vw, 14px);
+  bottom: clamp(-18px, -2vw, -25px);
   margin: 0;
   font-family: "Inter", sans-serif;
-  font-size: clamp(72px, 13vw, 188px);
+  font-size: clamp(64px, 14vw, 188px);
   font-weight: 800;
-  line-height: 1;
+  line-height: 0.9;
   color: #2a406a;
   z-index: 1;
 }
 
 .topShoe {
   position: absolute;
-  left: clamp(90px, 22vw, 320px);
-  top: clamp(8px, 1.5vw, 20px);
-  width: clamp(150px, 24vw, 339px);
+  left: clamp(90px, 34vw, 320px);
+  top: clamp(8px, 2vw, 20px);
+  width: clamp(120px, 36vw, 339px);
   height: auto;
   object-fit: contain;
   z-index: 3;
@@ -56,35 +56,39 @@
 
 .discount {
   position: absolute;
-  top: clamp(10px, 1.2vw, 16px);
-  right: clamp(12px, 4vw, 62px);
+  top: clamp(8px, 2vw, 16px);
+  right: clamp(10px, 4vw, 62px);
   z-index: 4;
+  text-align: left;
+  max-width: 48%;
 }
 
 .discount p {
-  margin: 0 0 clamp(2px, 0.5vw, 6px) 0;
-  font-size: clamp(16px, 3.3vw, 48px);
+  margin: 0 0 clamp(2px, 0.6vw, 6px) 0;
+  font-size: clamp(16px, 4vw, 48px);
   font-weight: 700;
   line-height: 1;
   color: #ffffff;
+  white-space: nowrap;
 }
-
 .discount h1 {
   margin: 0;
-  font-size: clamp(40px, 8.8vw, 128px);
+  font-size: clamp(34px, 10vw, 128px);
   font-weight: 800;
   line-height: 0.95;
   color: #ffffff;
+  white-space: nowrap;
 }
 
 .air {
   position: absolute;
-  bottom: clamp(-28px, -1.3vw, -25px);
+  left: clamp(8px, 1.2vw, 14px);
+  bottom: clamp(-18px, -2vw, -25px);
   margin: 0;
   font-family: "Inter", sans-serif;
-  font-size: clamp(72px, 13vw, 188px);
+  font-size: clamp(64px, 14vw, 188px);
   font-weight: 800;
-  line-height: 1;
+  line-height: 0.9;
   color: #696969;
   opacity: 0.72;
   z-index: 1;
@@ -92,14 +96,20 @@
 
 .bottomShoe {
   position: absolute;
-  right: clamp(20px, 9vw, 138px);
-  top: clamp(-10px, -0.2vw, -2px);
-  width: clamp(170px, 30vw, 428px);
+  right: clamp(12px, 12vw, 138px);
+  top: clamp(-10px, -0.5vw, -2px);
+  width: clamp(140px, 42vw, 428px);
   height: auto;
   object-fit: contain;
   z-index: 3;
 }
-
+@media (max-width: 768px){
+   .topShoe {
+    left: 10%;
+    top: 30px;
+    width: 35%;
+  } 
+}
 @media (max-width: 600px) {
   .topShoe {
     left: 26vw;
@@ -114,5 +124,51 @@
 
   .discount {
     right: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .top {
+    min-height: 150px;
+  }
+
+  .bottom {
+    min-height: 100px;
+  }
+
+  .discount {
+    top: 10px;
+    right: 10px;
+    max-width: 54%;
+  }
+
+  .discount p {
+    font-size: 16px;
+  }
+
+  .discount h1 {
+    font-size: 34px;
+    line-height: 1;
+  }
+
+  .topShoe {
+    left: 15%;
+    top: 30px;
+    width: 45%;
+  }
+
+  .one {
+    font-size: 64px;
+    bottom: -12px;
+  }
+
+  .air {
+    font-size: 58px;
+    bottom: -10px;
+  }
+
+  .bottomShoe {
+    right:  5%;
+    top: 0px;
+    width: 45%;
   }
 }
