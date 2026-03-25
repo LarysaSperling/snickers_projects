@@ -1,57 +1,46 @@
 .footer {
   width: 100%;
   background: #232425;
-  padding: 60px 0;
-  margin-top: 80px;
+  padding: 80px 0 60px;
+  margin-top: 120px;
 }
 
 .container {
-  width: 100%;
   max-width: 1420px;
   margin: 0 auto;
   padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.top {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 60px;
+  margin-bottom: 50px;
   flex-wrap: wrap;
-  box-sizing: border-box;
 }
 
 .left {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .title {
-  margin-bottom: 20px;
   color: #ffffff;
   font-size: 22px;
   font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .text {
-  margin-bottom: 10px;
   color: #8f9196;
   font-size: 14px;
 }
 
-.copy {
-  margin-top: 30px;
-  color: #6d7077;
-  font-size: 12px;
-}
-
-.right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  width: min(100%, 420px);
-}
-
 .socials {
   display: flex;
-  gap: 14px;
-  margin-bottom: 35px;
+  gap: 18px;
 }
 
 .socials a {
@@ -66,12 +55,12 @@
 }
 
 .socials img {
-  width: 18px;
-  height: 18px;
+  width: 32px;
+  height: 32px;
 }
 
 .socials a:hover {
-  transform: translateY(-3px) scale(1.05);
+  transform: translateY(-3px);
   background: #9dd458;
 }
 
@@ -79,8 +68,21 @@
   transform: scale(0.9);
 }
 
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.copy {
+  color: #6d7077;
+  font-size: 12px;
+}
+
 .inputWrap {
-  width: 100%;
+  width: 320px;
 }
 
 .input {
@@ -91,8 +93,7 @@
   padding: 10px 0;
   color: #ffffff;
   outline: none;
-  transition: border-color 0.2s ease;
-  box-sizing: border-box;
+  transition: 0.2s;
 }
 
 .input:focus {
@@ -103,21 +104,23 @@
   color: #8a8f98;
 }
 
+
 @media (max-width: 768px) {
-  .container {
+  .top {
     flex-direction: column;
-    align-items: flex-start;
     gap: 30px;
   }
 
-  .right {
+  .bottom {
+    flex-direction: column;
     align-items: flex-start;
+    gap: 20px;
+  }
+
+  .inputWrap {
     width: 100%;
   }
-.inputWrap {
-    width: 100%;
-    max-width: 100%;
-  }
+
   .input {
     width: 100%;
   }
@@ -125,7 +128,12 @@
 
 @media (max-width: 480px) {
   .footer {
-    padding: 40px 0;
+    padding: 50px 0;
+    margin-top: 80px;
+  }
+
+  .container {
+    padding: 0 16px;
   }
 
   .title {
@@ -136,10 +144,6 @@
     font-size: 13px;
   }
 
-  .socials {
-    gap: 10px;
-  }
-
   .socials a {
     width: 34px;
     height: 34px;
@@ -148,10 +152,5 @@
   .socials img {
     width: 16px;
     height: 16px;
-  }
-
-  .input {
-    padding: 8px 0;
-    font-size: 14px;
   }
 }

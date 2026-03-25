@@ -6,7 +6,7 @@
   border-radius: 20px;
   padding: clamp(16px, 2vw, 24px);
   box-sizing: border-box;
-
+border: 1px solid #cccaca;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15,7 +15,9 @@
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  border-color: #dcdcdc;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transform: translateY(-3px);
 }
 
 .image {
