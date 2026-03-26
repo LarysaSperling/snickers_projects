@@ -79,7 +79,7 @@ border: 1px solid #cccaca;
 }
 
 .button:active {
-  background: #807e7e;
+  background: #03060F;
   transform: scale(0.92);
 }
 

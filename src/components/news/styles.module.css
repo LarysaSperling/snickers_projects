@@ -98,7 +98,7 @@
   position: absolute;
   right: clamp(12px, 12vw, 138px);
   top: clamp(-10px, -0.5vw, -2px);
-  width: clamp(140px, 42vw, 428px);
+  width: clamp(140px, 42vw, 548px);
   height: auto;
   object-fit: contain;
   z-index: 3;
